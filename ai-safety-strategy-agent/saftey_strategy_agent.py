@@ -3,8 +3,7 @@ from crewai import Agent, Task, Crew
 from langchain_openai import ChatOpenAI
 from crewai_tools import SerperDevTool
 from dotenv import load_dotenv
-load_dotenv()
-
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', '.env'))
 
 
 llm = ChatOpenAI(model="gpt-4", temperature=0.7)
